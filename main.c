@@ -5,9 +5,18 @@ int comparacoes = 0;  // Contador global
 int trocas = 0;       // Contador global
  
 void bubbleSort(int v[], int n) {
-    // TODO: Implementar aqui
-    // Incrementar comparacoes++ a cada comparação
-    // Incrementar trocas++ a cada troca
+    int i, j, aux;
+    for(i = 0; i< n-1; i++){
+        for(j = 0; j < n-i-1; j++){
+            comparacoes++;
+            if(v[j] > v[j+1]){
+                aux = v[j];
+                v[j] = v[j+1];
+                v[j+1] = aux;
+                trocas++;
+            }
+        }
+    }
 }
  
 void imprimirVetor(int v[], int n) {
